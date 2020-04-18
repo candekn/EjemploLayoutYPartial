@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title> <!--Este razor esta definido en cada vista.-->
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 bg-primary">
+                <header class="page-header">
+                    <h2>Titulo de Header</h2>
+                    <h4>Bienvenido a @ViewBag.Title</h4>
+                </header>
+            </div>
+        </div>
+        <div class="row">
+            <nav class="navbar col-md-12 list-group-item-danger ">
+                <ul class="list-inline col-md-offset-4">
+                    <li><a href="#">Item 1</a></li>
+                    <li><a href="#">Item 2</a></li>
+                    <li><a href="#">Item 3</a></li>
+                    <li><a href="#">Item 4</a></li>
+                    <li><a href="#">Item 5</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <article class="col-md-10 col-lg-0">
+                @RenderBody() <!--Acá se encuentra lo q esta dentro de Index.cshtml-->
+            </article>
+        </div>
+    </div>
+    @Html.Partial("_PartialFooter")
+</body>
+</html>
